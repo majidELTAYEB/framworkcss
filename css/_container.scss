@@ -1,0 +1,11 @@
+.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+
+  &-fluid {
+    width: 100%;
+    margin: auto;
+  }
+}

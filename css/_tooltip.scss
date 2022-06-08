@@ -1,0 +1,41 @@
+.tooltip {
+  position: relative;
+  border-bottom: 1px dashed #555;
+
+  &::before {
+    display: none; /* hide by default */
+
+    content: attr(title); /* here's the magic */
+    position: absolute;
+
+    /* basic styles */
+    width: 200px;
+    padding: 0px;
+    border-radius: 10px;
+    background: #555;
+    color: #fff;
+    text-align: center;
+  }
+
+  &:hover {
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.tooltip[data-placement="top"]:hover:before {
+  top: -100%;
+}
+
+.tooltip[data-placement="bottom"]:hover:before {
+  bottom: -100%;
+}
+
+.tooltip[data-placement="right"]:hover:before {
+  right: -160%;
+}
+
+.tooltip[data-placement="left"]:hover:before {
+  left: -160%;
+}

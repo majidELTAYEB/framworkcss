@@ -1,0 +1,14 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@for $i from 1 through 12 {
+    .test#{$i} {
+      @include random-bgr();
+    }
+
+}

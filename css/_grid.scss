@@ -1,0 +1,63 @@
+$columns: 12;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    // @extend .ext;
+    width: $i / $columns * 100%;
+  }
+  nav {
+    background-color: blanchedalmond;
+    height: 50px;
+    transition: all 1s;
+  }
+}
+
+// RESPOSIVE GRID
+
+@media only screen and (max-width: $small) {
+  @for $i from 1 through $columns {
+    .col-sm-#{$i} {
+      width: $i / $columns * 100%;
+    }
+    nav {
+      background-color: blanchedalmond;
+      height: 50px;
+      transition: all 1s;
+    }
+  }
+}
+
+@media only screen and (min-width: $medium) {
+  @for $i from 1 through $columns {
+    .col-md-#{$i} {
+      width: $i / $columns * 100%;
+    }
+  }
+  nav {
+    background-color: blanchedalmond;
+    height: 75px;
+    transition: all 1s;
+  }
+}
+
+@media only screen and (min-width: $large) {
+  @for $i from 1 through $columns {
+    .col-lg-#{$i} {
+      width: $i / $columns * 100%;
+    }
+  }
+}

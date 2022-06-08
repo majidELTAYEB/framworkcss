@@ -1,0 +1,51 @@
+.tab-list {
+    list-style: none;
+  }
+  
+  .tab-list li {
+    display: inline;
+  }
+  
+  .tab-list li a {
+    color: black;
+    float: left;
+    display: block;
+    padding: 4px 10px;
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+    background: white;
+    text-decoration: none;
+  }
+  
+  .tab-list li a:hover {
+    background: #ccc;
+  }
+  
+  .tab-list:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  
+  .tab-pane {
+    position: relative;
+    min-height: 250px;
+  }
+  
+  .tab-content {
+    background: white;
+    padding: 20px;
+    min-height: 250px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+  }
+
+  #box-one:target, #box-two:target, #box-three:target {
+    z-index: 1;
+  }

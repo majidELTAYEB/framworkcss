@@ -1,0 +1,32 @@
+
+
+.myModal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1055;
+}
+
+.myModal.show{
+    display: flex;
+}
+
+.myModal.hide{
+    display: none;
+}
+
+.modal{
+    position: relative;
+    background-color: white;
+    width: 500px;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1055;
+}

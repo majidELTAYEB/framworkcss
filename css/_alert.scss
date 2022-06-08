@@ -1,0 +1,15 @@
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+@each $name, $color in $colors {
+    .alert-#{$name}{
+        color : $color;
+        background-color: rgba($color,.4);
+        border-color: rgba($color,.2);
+    }
+}
